@@ -1,0 +1,162 @@
+/* 
+ * PAGE LAYOUT
+*/
+
+body {
+    background-color: #252525;
+}
+
+.icon {
+    float: left; 
+    width: 8.5%; 
+    height: 45px; 
+    background-color: rgba(255,255,255,.8);
+    text-align: center;
+}
+.icontext {
+    font-size: 14pt; 
+    font-weight:900; 
+    font-family: sans-serif; 
+    color:#333;
+}
+.icontext-vpad {
+    height: 12px;
+}
+
+.banner {
+    vertical-align: middle;
+    width: 1200px;  
+    height: 45px; 
+    border-radius: 8px;
+    /*background-color: #252525;*/
+    background: linear-gradient(90deg, #535353 0%, #333333 50%, #252525 100%);
+    /*engraved text
+    text-shadow:0 1px 0 #FFFFFF;
+    */
+    /*
+    background-color: #333333; 
+    width: 100%;
+    */
+}
+.banner-row {
+    float: left; 
+    width:86.8%; 
+    height:45px; 
+    border-radius:2px;
+}
+.banner-text {
+    color: white;
+    font-size: 18pt;
+}
+.banner-text-vpad {
+    height: 9px;
+}
+
+.col1 {
+    float: left;
+    width: 87%;
+}
+.col2 {
+    float: left;
+    width: 13%;
+}
+
+/* Remove float behavior for everything below */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* 
+ * LINE CHART 
+*/
+.line {
+    fill: none;
+    stroke: #CCCCCC; /* blue, gray */
+    stroke-width: 0.6pt;
+}
+.xgrid {
+    color: #999999;
+    opacity: 0.2;
+    stroke-width: 1pt;
+}
+
+.ygrid {
+    color: #999999;
+    opacity: 0.2;
+    stroke-width: 1pt;
+}
+
+.axis {
+    color: #999999; /*#88DD77*/
+    /*font-size: 11pt;*/
+}
+
+/* 
+ * FEATURE PANEL 
+*/
+
+.panel-title {
+    color: #CCCCCC;
+    font: 14px sans-serif;
+    font-weight: 600
+}
+
+.panel-container{
+    background-color: #2C2C2C; /* rgb(29, 29, 29); */
+    padding-left:15px;
+    padding-top: 1px;
+    padding-bottom:15px;
+    /*height: 34px;*/
+    width: 100px ;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    border-top: none;
+    border-bottom: 2px solid #666;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,.39), 0 -1px 1px #222222, 0 1px 0 #222222;
+}
+/* Applies to all checkboxes. Checkboxes in a particular scope need to be put into a container */
+/*
+input[type=checkbox]:hover {
+    box-shadow: 0px 0px 5px white;
+}
+*/
+
+/* Applies to all checkboxes of class "panel-checkbox" */
+input[type=checkbox].panel-checkbox:hover {
+    box-shadow: 0px 0px 3px greenyellow;
+}
+/* Alternative: The input tag is a descendant of the label (appears inside the <label> tag
+    <label class="panel-checkbox-label"> <input type="checkbox"> </label>  */
+.panel-checkbox-label:hover input[type=checkbox] {   /*input:hover*/
+    box-shadow: 2px -2px 5px greenyellow;
+}
+.panel-checkbox-label {
+    color:  #CCCCCC; /* white; */
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+
+/* 
+ * SVG: scalable
+*/
+.div-container {
+    border: none; /*solid 0px black;*/
+}
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
